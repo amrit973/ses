@@ -21,7 +21,7 @@
             <a class="btn btn-social-icon btn-linkedin"><span class="fa fa-linkedin-square"></span></a>
             <a class="btn btn-social-icon btn-github"><span class="fa fa-github"></span></a>
                </div>
-               <div class="col-md-4 col-md-offset-2">
+               <div class="col-md-4 col-md-offset-2 contact">
                   <h4>Contact Us</h4>
                    <form method="POST" action="sendmail.php">
                          <div class="form-group">
