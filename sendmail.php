@@ -63,3 +63,5 @@ else
 echo 'Please enter valid email and message';
 }
 ?>
+<br><br>
+<a href="index.php">Click here to go back</a>

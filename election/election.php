@@ -1,12 +1,38 @@
 <?php
 session_start();
 include $_SERVER['DOCUMENT_ROOT'].'/ses/connect.php';
+
+
+if(!isset($_SESSION['title'])or!isset($_SESSION['date']) or!isset($_SESSION['election'])or !isset($_SESSION['email']) )
+{
+  header('Location:..');
+}
+if(isset($_SESSION['email']))
+{
+  $email = $_SESSION['email'];
+  $query = "select vote from voters where email='$email'";
+  $result = mysqli_query($connection,$query) or die('error querying');
+  $data = mysqli_fetch_array($result);
+  if($data==0)
+  {
+    header('Location:..');
+  }
+  foreach($result as $row)
+  {
+    if($row['vote']==1)
+    {
+      header('Location:..');
+    }
+  }
+
+}
+$title = $_SESSION['title'];
+$date = $_SESSION['date'];
 $query = 'select * from candidate';
 $candidates = mysqli_query($connection,$query) or die ('Error querying candidate');
 $query = 'select * from voters';
 $voters = mysqli_query($connection,$query) or die ('Error querying candidate');
-$title = strtoupper($_POST['title']);
-$date = $_POST['date'];
+$title = strtoupper($title);
 ?>
 <!DOCTYPE html>
 <html>

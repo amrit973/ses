@@ -31,10 +31,10 @@
                  <a href="?newelection">New Election</a>
               </td>
               <td>
-                  <a href="">View Result</a>
+                  <a href="?result">View Result</a>
               </td>
               <td>
-                  <a href="">End Election</a>
+                  <a href="electionOver.php">End Election</a>
               </td>
           </tr>
       </table>

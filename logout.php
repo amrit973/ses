@@ -1,5 +1,5 @@
 <?php
 session_start();
-session_destroy();
+unset($_SESSION['email']);
 echo "You've been logged out.<a href='index.php'>Click here</a> to login again ";
 ?>

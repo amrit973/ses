@@ -3,8 +3,19 @@ session_start();
 include 'connect.php';
 $email = $_POST['email'];
 $password = $_POST['password'];
+$enc = sha1($password);
 
- $query = "select * from candidate where email='$email' and password='$password'";
+$query = "select * from admin where email='$email' and password='$enc'";
+$result = mysqli_query($connection,$query)or die ('unable to query databse');
+$data = mysqli_fetch_array($result);
+if($data!=0)
+{
+   $_SESSION['admin']="amrit973";
+   $_SESSION['email']=$email;
+   header("Location:adminForm.php");
+}
+
+$query = "select * from candidate where email='$email' and password='$password'";
     $result = mysqli_query($connection,$query)or die ('unable to query databse');
     $data = mysqli_fetch_array($result);
     if($data==0&& !isset($_SESSION["email"]))
@@ -25,7 +36,6 @@ $password = $_POST['password'];
                            <div class="row">
                                <div class="col-md-3 col-sm-3 col-xs-3">
                           <img src="show.php" align="center" class="img-responsive"><br>
-                              <img src="http://placehold.it/300x300" class="img-responsive" align="center">
                                </div>
                                <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
                                   <table class="table table-hover table-responsive">
@@ -148,8 +158,8 @@ $password = $_POST['password'];
 
                                   </table>
                                   <div class="pull-right">
-                                  <button class="btn btn-danger">MESSAGE &nbsp;<span class="glyphicon glyphicon-envelope"></span></button>
-                                  <button class="btn btn-danger" >RESULT <span class="glyphicon glyphicon-briefcase"></span></button>
+                                 <a href="#contact"> <button class="btn btn-danger">MESSAGE &nbsp;<span class="glyphicon glyphicon-envelope"></span></button></a>
+                                  <a href="election/result.php"><button class="btn btn-danger" >RESULT <span class="glyphicon glyphicon-briefcase"></span></button></a>
                                   </div>
                                   </div>
                            </div>

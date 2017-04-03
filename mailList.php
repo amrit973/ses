@@ -1,7 +1,14 @@
+
+<?php
+include_once 'connect.php';
+$query2 = "select email from candidate";
+$result = mysqli_query($connection,$query2) or die("Error querying databse");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Mail</title>
+    <title>Mail</title>
 </head>
 <body>
 <h1>Mail List</h1>
@@ -11,6 +18,6 @@
     <li><?php echo $list['email'];?></li>
 <?php endforeach?>
 </ul>
-<a href="?all">Send Message to all Members.</a>
+<a href="?all">Send Message to all Candidates.</a>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <?php
 session_start();
 include 'connect.php';
-if(!isset($_SESSION['email']))
+if(!isset($_SESSION['email']) or $_SESSION['admin']!='amrit973')
 {
   header('Location:index.php');
 }
@@ -67,10 +67,10 @@ $data = mysqli_fetch_array($result);
                         <a href="admin.php"><i class="fa fa-user"></i> &nbsp;Profile</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-wrench"></i> &nbsp;Election</a>
+                        <a href="/ses/election"><i class="fa fa-wrench"></i> &nbsp;Election</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-envelope"></i> &nbsp;Mail</a>
+                        <a href="adminMail.php"><i class="fa fa-envelope"></i> &nbsp;Mail</a>
                     </li>
                     <li>
                         <a href="calendarAdmin.php"><i class="fa fa-calendar"></i> &nbsp;Calendar</a>
@@ -84,15 +84,16 @@ $data = mysqli_fetch_array($result);
                        <div class="panel-heading">Admin Profile</div>
                        <div class="panel-body">
                            <div class="row">
-                               <div class="col-md-3 col-sm-3 col-xs-3">
-                          <img src="http://placehold.it/300x300" class="img-responsive" align="center"><br>
-                               </div>
-                               <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
-                                  <table class="table table-hover table-responsive">
-                                         <?php
+                            <?php
                                            foreach ($result as $desc)
                                            {
                                              ?>
+                               <div class="col-md-3 col-sm-3 col-xs-3">
+                              <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $desc['images'] ).'" class="img-responsive"/>';?><br>
+                               </div>
+                               <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
+                                  <table class="table table-hover table-responsive">
+
                                                      <tbody>
                                                <tr>
                                                     <td>NAME :</td>

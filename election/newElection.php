@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div class="box">
 
+<div class="box">
     <table align="center">
     <h1></h1>
     <tr>
@@ -16,6 +10,3 @@
 </table>
 </div>
 
-
-</body>
-</html>

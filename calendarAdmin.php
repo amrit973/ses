@@ -1,8 +1,8 @@
 <!--http://placehold.it/500x300-->
 <?php
 session_start();
-include 'connect.php';
-if(!isset($_SESSION['email']))
+//include 'connect.php';
+if(!isset($_SESSION['email']) or $_SESSION['admin']!='amrit973')
 {
   header('Location:index.php');
 }
@@ -126,10 +126,10 @@ $connection =mysqli_connect($dbhost,$dbuser,$dbpassword,$dbdatabse)or die ("erro
                         <a href="admin.php"><i class="fa fa-user"></i> &nbsp;Profile</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-wrench"></i> &nbsp;Election</a>
+                        <a href="/ses/election"><i class="fa fa-wrench"></i> &nbsp;Election</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-envelope"></i> &nbsp;Mail</a>
+                        <a href="adminMail.php"><i class="fa fa-envelope"></i> &nbsp;Mail</a>
                     </li>
                     <li>
                         <a href="calendarAdmin.php"><i class="fa fa-calendar"></i> &nbsp;Calendar</a>

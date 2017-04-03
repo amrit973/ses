@@ -15,18 +15,6 @@
                     <li><a href="#">Services</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                  <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                     <span class="glyphicon glyphicon-envelope" style="font-size:1em;"></span>
-                     <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Signup</a></li>
-                        <li role="seperator" class="divider"></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-
-                </ul>
-            </li>
 
 
             <li class="dropdown">

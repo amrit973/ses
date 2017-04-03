@@ -11,11 +11,8 @@
               <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
                     <li class="active"> <a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-bell" style="font-size:1em;"></span></a></li>
             <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                      <span class="glyphicon glyphicon-user responsive" style="font-size:1em;"></span>

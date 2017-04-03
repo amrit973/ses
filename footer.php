@@ -11,7 +11,6 @@
                     <a href="#">Home</a><br>
                     <a href="#">Services</a><br>
                     <a href="#">Links</a><br>
-                    <a href="adminLogin.php">Admin</a><br>
             </ul>
                </div>
                <div class="col-md-2">
@@ -21,7 +20,8 @@
             <a class="btn btn-social-icon btn-linkedin"><span class="fa fa-linkedin-square"></span></a>
             <a class="btn btn-social-icon btn-github"><span class="fa fa-github"></span></a>
                </div>
-               <div class="col-md-4 col-md-offset-2 contact">
+               <div id="contact">
+                 <div class="col-md-4 col-md-offset-2 contact">
                   <h4>Contact Us</h4>
                    <form method="POST" action="sendmail.php">
                          <div class="form-group">
@@ -33,6 +33,7 @@
                          </div>
                          <button type="submit" class="btn btn-info">Send</button>
                    </form>
+               </div>
                </div>
            </div>
        </div>

@@ -1,18 +1,13 @@
 <?php
 session_start();
-include 'connect.php';
-$email = $_POST['email'];
-$mPassword =$_POST['password'];
-$password = sha1($mPassword);
-$query = "select * from admin where email ='$email' and password='$password'";
-$result = mysqli_query($connection,$query)or die('error querying database');
-$data = mysqli_fetch_array($result);
-if($data==0)
-    header("Location:index.php");
+if(isset($_SESSION['email']) and isset($_SESSION['admin']) and $_SESSION['admin']=="amrit973")
+{
+    echo "hello";
+    header("Location:admin.php");
+}
 else
 {
-    header("Location:admin.php");
-    $_SESSION['email']=$email;
+    header("Location:index.php");
 }
 
 ?>

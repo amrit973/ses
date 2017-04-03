@@ -6,7 +6,7 @@
 <body>
 <div class="box">
 <h1>Create new Election</h1>
-<form method="post" action="election.php">
+<form method="post" action="">
     <div>
         <label for="title">Enter Title: </label>
         <input type="text" name="title">
@@ -18,7 +18,7 @@
     </div>
     <br>
     <div>
-        <input type="submit" name="election" value="start election">
+        <input type="submit" name="election" value="start">
     </div>
 </form>
 </div>

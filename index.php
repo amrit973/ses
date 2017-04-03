@@ -7,18 +7,18 @@
      <?php include 'navbar.php';?>
                    <div class="row">
                      <div class="main2">
-                       <div class="col-md-9 col-sm-9 col-xs-9">
+                       <div class="col-md-9">
                             <?php include 'carousel.php';?>
                        </div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="col-md-3">
                                 <nav class="navbar navbar-inverse " id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
 
                 <li>
-                    <a href="#">Home</a>
+                    <a href="match.php">Voter</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="index.html">About</a>
                 </li>
                 <li>
                     <a href="#">Events</a>
@@ -28,10 +28,10 @@
                     <a href="#">Services</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/maridlcrmn">Follow me</a>
+                    <a href="https://twitter.com/maridlcrmn">Follow us</a>
                 </li>
             </ul>
         </nav>
